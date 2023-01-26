@@ -26,6 +26,18 @@ const handleNavItemsAnimations = () => {
 	})
 }
 
+const handleObserver = () => {
+	const currentSection = window.scrollY
+
+	allSections.forEach(section => {
+		if (section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+			navBtnBars.classList.add('black-bars-color')
+		} else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+			navBtnBars.classList.remove('black-bars-color')
+		}
+	})
+}
+
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	footerYear.innerText = year
@@ -33,3 +45,4 @@ const handleCurrentYear = () => {
 
 handleCurrentYear()
 navBtn.addEventListener('click', handleClick)
+window.addEventListener('scroll', handleObserver)

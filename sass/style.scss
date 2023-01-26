@@ -20,12 +20,6 @@ body {
 	font-size: 1.6rem;
 }
 
-.black-bars-color,
-.black-bars-color::after,
-.black-bars-color::before {
-	background-color: $dark;
-}
-
 // NAVIGATION //
 
 .burger-btn {
@@ -135,6 +129,12 @@ body {
 
 .nav-items-animation {
 	animation: navItemsAnimation 1s both;
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $dark;
 }
 
 // HEADER //
